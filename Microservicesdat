@@ -1,0 +1,60 @@
+############# CBS parameters in Json ouwhich we need to parse ##########################
+####### Required SYNC_GATEWAY PegID's and SG Peg Params should be of the same order ####
+####### Verify the mapping between PegParam and PegID before executing the script ######
+
+CBS_PegIDS_Params = bytes_read:35001,bytes_written:35002,ep_total_enqueued:35003,ep_total_persisted:35004,curr_items:35005,curr_temp_items:35006,curr_items_tot:35007,ep_kv_size:35008,ep_value_size:35009,ep_overhead:35010,ep_total_cache_size:35011,ep_tap_bg_fetched:35012,ep_num_value_ejects:35013,ep_num_not_my_vbuckets:35014,vb_active_ops_create:35015,vb_active_ops_update:35016,vb_active_ops_delete:35017,vb_active_ops_reject:35018,vb_replica_ops_create:35019,vb_replica_ops_update:35020,vb_replica_ops_delete:35021,vb_replica_ops_reject:35022,vb_active_curr_items:35023,vb_active_perc_mem_resident:35024,vb_replica_curr_items:35025,vb_replica_perc_mem_resident:35026,vb_active_itm_memory:35027,vb_active_meta_data_memory:35028,vb_replica_itm_memory:35029,vb_replica_meta_data_memory:35030,mem_used:35031,total_fragmentation_bytes:35032,ep_bg_fetched:35033,ep_queue_size:35034,ep_flusher_todo:35035,vb_active_eject:35036,vb_replica_eject:35037,ep_oom_errors:35038,ep_tmp_oom_errors:35039,ep_db_data_size:35040,ep_db_file_size:35041,tap_mutation_sent:35042,ep_uncommitted_items:35043,ep_num_eject_failures:35044,ep_flush_duration_total:35045,ep_commit_num:35046,ep_commit_time_total:35047,ep_diskqueue_pending:35048,vb_active_queue_pending:35049,vb_replica_queue_pending:35050,ep_num_non_resident:35051,vb_active_num_non_resident:35052,vb_replica_num_non_resident:35053,vb_pending_num_non_resident:35054,vb_pending_ops_create:35055,vb_pending_ops_update:35056,vb_pending_ops_delete:35057,vb_pending_ops_reject:35058,vb_pending_curr_items:35059,vb_pending_perc_mem_resident:35060,vb_pending_itm_memory:35061,vb_pending_meta_data_memory:35062,vb_pending_eject:35063,vb_pending_queue_pending:35064,cmd_get:35065,cmd_set:35066,get_hits:35067,get_misses:35068,delete_hits:35069,delete_misses:35070,incr_misses:35071,incr_hits:35072,decr_misses:35073,decr_hits:35074,ep_diskqueue_fill:35075,ep_diskqueue_drain:35076
+
+
+SG_PegIDS_Params = maxPending:33201,lag-tap-:33202,lag-queue-:33203,lag-total-:33204,outOfOrder:33205,view_queries:33206,abandoned_seqs:33207,channelChangesFeeds:33208,channelLogAdds:33209,channelLogAppends:33210,channelLogCacheHits:33211,channelLogCacheMisses:33212,channelLogRewrites:33213,channelLogRewriteCollisions:33214,document_gets:33215,revisionCache_adds:33216,revs_added:33217,sequence_gets:33218,sequence_reserves:33219,changesFeeds_active:33220,changesFeeds_total:33221,requests_active:33222,requests_total:33223,revisionCache_hits:33224,revisionCache_misses:33225,requests_:33226
+
+
+SGREP_PegIDS_Params = maxPending:33201,lag-tap-:33202,lag-queue-:33203,lag-total-:33204,outOfOrder:33205,view_queries:33206,abandoned_seqs:33207,channelChangesFeeds:33208,channelLogAdds:33209,channelLogAppends:33210,channelLogCacheHits:33211,channelLogCacheMisses:33212,channelLogRewrites:33213,channelLogRewriteCollisions:33214,document_gets:33215,revisionCache_adds:33216,revs_added:33217,sequence_gets:33218,sequence_reserves:33219,changesFeeds_active:33220,changesFeeds_total:33221,requests_active:33222,requests_total:33223,revisionCache_hits:33224,revisionCache_misses:33225,requests_:33226,docs_read:33229,docs_written:33230,doc_write_failures:33231
+
+RMQ_PegIDS_Params = RMQ_NODE_TOTAL_CONNECTION_COUNT:33001,RMQ_NODE_TOTAL_CHANNEL_COUNT:33002,RMQ_NODE_TOTAL_CONSUMER_COUNT:33003,RMQ_NODE_MASTER_QUEUE_COUNT:33004,RMQ_NODE_MIRROR_QUEUE_COUNT:33005,RMQ_NODE_TOTAL_NUM_PACKETS_SENT:33006,RMQ_NODE_TOTAL_NUM_PACKETS_RECVD:33007,RMQ_NODE_TOTAL_NUM_OCTETS_SENT:33008,RMQ_NODE_TOTAL_NUM_OCTETS_RECVD:33009,RMQ_CLUSTER_ACTIVE_NODE_COUNT:33010,RMQ_CLUSTER_AVG_PER_CONSUMER_UTILISATION:33011,RMQ_NODE_ONLINE_QUEUE_COUNT:33012,RMQ_NODE_OFFLINE_QUEUE_COUNT:33013,RMQ_CLUSTER_AVG_CONSUMER_PER_QUEUE:33014,RMQ_QUEUE_TOTAL_MEM_CONSUMED:33015,RMQ_QUEUE_TOTAL_MSG_READS_FROM_DISK:33016,RMQ_QUEUE_TOTAL_MSG_WRITES_TO_DISK:33017,RMQ_QUEUE_TOTAL_MSG_READY:33018,RMQ_QUEUE_TOTAL_MSG_UNACKED:33019,RMQ_QUEUE_TOTAL_MSG_BYTES:33020,RMQ_QUEUE_TOTAL_MSG_BYTES_RAM:33021,RMQ_QUEUE_TOTAL_MSG_BYTES_PERSISTENT:33022,RMQ_PTMSG_SERVICE_AVG_QUEUE_SIZE:33023,RMQ_EGLS_SERVICE_AVG_QUEUE_SIZE:33024,RMQ_NOTIFY_SERVICE_AVG_QUEUE_SIZE:33025,RMQ_APNS_PUSH_NOTIFY_AVG_QUEUE_SIZE:33026,RMQ_SUM_CBIFACE_SERVICE_AVG_QUEUE_SIZE:33027
+
+GridGain_PegIDS_Params = totalRejectedJobs:36311,totalCancelledJobs:36312,totalExecutedJobs:36313,totalStartedThreadCount:36314,maximumActiveJobs:36315,currentActiveJobs:36316,averageActiveJobs:36317,maximumWaitingJobs:36318,averageWaitingJobs:36319,maximumJobWaitTime:36320,averageJobWaitTime:36321,busyTimePercentage:36322,idleTimePercentage:36323,currentCpuLoad:36324,averageCpuLoad:36325,currentGcCpuLoad:36326,heapMemoryUsed:36327,nonHeapMemoryUsed:36328,nonHeapMemoryCommitted:36329,nonHeapMemoryMaximum:36330,currentThreadCount:36331,maximumThreadCount:36332,currentDaemonThreadCount:36333
+
+############# Property File path #################################################################
+PropertyFilePath = /DG/activeRelease/dat/
+
+# # If DBAlarm_Flag = 0 call RaiseWebAlarm() of Alarms class
+# # If DBAlarm_Flag = 1 call RaiseClearAlarm() of Alarms class
+# # This Flag is used only for CBS/SG calls
+
+DBAlarm_Flag = 0
+## The following parameters are used for KPI Pegging ##############################################
+
+Kpi_prefix = DGKPI_
+Rsyslog_host = 127.0.0.1
+Rsyslog_port = 1520
+Syslog_src_port = 1364
+Kpi_log_path = /DGlogs
+Syslog_Kpi_Tag=KPI:
+############# Property File path #################################################################
+
+WebAlarm_Fqdn = ALARMSERVICE_FQDN
+WebAlarm_generate_url = http://IP_address:8080/kodiakpegser/rest/stats/alarm/generate
+
+#################  Reference for our Json/cbstats O/P Parsing ######################################################
+################## Json SYNC GATEWAY O/P Params ###################################################
+################## lag-queue=lag-queue*ms, lag-tap=lag-tap*ms, lag-total=lag-total*ms #############
+################## requests=requests*ms ###########################################################
+
+syncGateway_changeCache = maxPending,outOfOrder,view_queries,lag-queue-,lag-tap-,lag-total-
+syncGateway_rest = requests_
+syncGateway_db = abandoned_seqs,channelChangesFeeds,channelLogAdds,channelLogAppends,channelLogCacheHits,channelLogCacheMisses,channelLogRewrites,channelLogRewriteCollisions,document_gets,revisionCache_adds,revs_added,sequence_gets,sequence_reserves
+syncGateway_stats = changesFeeds_active,changesFeeds_total,requests_active,requests_total,revisionCache_hits,revisionCache_misses
+
+
+################## CBS API's for PegData O/P #############################################################
+#
+CBS_CBstats_cmd_lines = /opt/couchbase/bin/cbstats localhost:11210 all -j -b ptxdata -u uid -p password,/opt/couchbase/bin/cbstats localhost:11210 memory -j -b ptxdata -u uid -p password
+#
+################### SYNC GW REST API's for PegData O/P ########################################################
+#
+Sync_Gateway_Rest_Apis = http://localhost:4985/_expvar/
+Sync_Gateway_Rep_Rest_Apis = http://localhost:4985/_expvar/,http://localhost:4985/_active_tasks
+#                                                                 
+################## GGAIN REST API URI ########################################################################
+Grid_Gain_RestApi_Uri = http://127.0.0.1:8080/ignite?cmd=node&mtr=true&ip=ServicePlaneIPAddressOfNode
+#
